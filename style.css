@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
 
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* variables end*/
+
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +29,7 @@ html {
   font-size: 62.5%;
   /* 1rem = 10px */
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +87,7 @@ body {
   
   /* Loading screen end */
 
+  /* Header start */
 .header {
   padding: 0 4.8rem;
   height: 12rem;
@@ -144,27 +164,6 @@ margin-bottom: 9px;
   display: none;
 }
 
-
-.section-hero,
-.section-services {
-  padding: 9.6rem 0;
-  background-color: #a5d8ff;
-  height: 60vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-services {
-  background: #f3f0ff;
-}
-
-.section-hero p,
-.section-services p {
-  font-size: 3.2rem;
-}
-
 @media (max-width: 62em) {
   .mobile-navbar-btn {
     display: block;
@@ -237,10 +236,91 @@ margin-bottom: 9px;
     font-size: 23px;
   }
 }
+/*header end*/
+
+
+/* about start */
+
+
+.hero {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 8.5rem;
+  /* max-width: 68.75rem; */
+  margin: auto;
+  background-color: skyblue;
+}
+.hero img {
+  height: 57.5rem;
+  width: 57.5rem;
+}
+
+.bio {
+  width: 50rem;
+  padding: 0.625rem;
+  border-radius: 26px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  background-color: #53925b;
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio-text {
+  line-height:1.8;
+  padding: 0.3rem 0;
+  margin:15px;
+  color:white;
+  font-size: large;
+}
+
+.bio-title{
+  line-height:.8;
+  font-size:30px;  
+  font-weight:bolder;
+  padding:10px;
+  
+  /* padding:0; */
+}
+
+.welcome{
+  margin:15px 15px 0px 14px;
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+        height: 37.5rem;
+        width: 30rem;
+    }
+
+  .bio {
+    margin-top: -7rem;
+    width: 28.5rem;
+    margin-bottom:10px;
+  }
+  .bio-title{
+    font-size:19px;
+    padding:2px;
+  }
+  .bio-text{
+    font-size: small;
+  }
+} 
+
+
+/* about end */
 
 
 
-/* footer */
+/* footer start*/
 
 footer{
     width: 100%;
