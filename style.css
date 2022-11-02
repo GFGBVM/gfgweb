@@ -345,7 +345,7 @@ margin-bottom: 9px;
     background: #fff;
     border-radius: 15px;
     text-align: center;
-    margin:12px;
+    margin:20px;
 }
 .our-team .pic{
     display: inline-block;
@@ -353,17 +353,31 @@ margin-bottom: 9px;
     height: 100%;
     background: #fff;
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     transition: all 0.5s ease 0s;
+
+    /* background: #318D44; */
+    border-radius: 10%;
+    /* transform: translateY(-35px); */
 }
-.our-team:hover .pic{
+/* .our-team:hover .pic{
     background: #318D44;
-    border-radius: 50%;
-}
+    border-radius: 10%;
+
+    transform: translateY(-35px);
+} */
+ /* .our-team:hover img{
+  background: #318D44;
+ border-radius: 10%;
+
+ transform: translateY(-35px);
+} */
 .pic img{
-    width: 100%;
-    height: 180px;
-    border-radius: 50%;
+  width: 100%;
+  height: 250px;
+  border-radius: 10%;
+  transform: translateY(-55px);
+  padding:5px;
 }
 .our-team .title{
     display: block;
@@ -372,6 +386,7 @@ margin-bottom: 9px;
     color: #2e282a;
     text-transform: uppercase;
     margin: 0 0 7px 0;
+    margin-top: -42px;
 }
 .our-team .post{
     display: block;
@@ -417,13 +432,13 @@ margin-bottom: 9px;
   display: flex;
   flex-direction: column;
   position: fixed;
-  right: 1%;
-  bottom: 50%;
+  left: 1%;
+  bottom: 40%;
 }
 
 .socicon {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   
 }
 
