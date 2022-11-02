@@ -80,6 +80,7 @@ body {
 .header h1{
 font-size: 27px;
 color:#308d46;
+margin-bottom: 9px;
 }
 
 .header .logo {
@@ -224,13 +225,16 @@ color:#308d46;
 }
 
 /* Below 560px  */
-@media (max-width: 35em) {
+@media (max-width: 992px) {
   .header {
     padding: 0 2.4rem;
   }
 
   .header .logo {
-    width: 60%;
+    width: 25%;
+  }
+  .header h1{
+    font-size: 23px;
   }
 }
 
