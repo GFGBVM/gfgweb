@@ -9,7 +9,8 @@
   --bg-color: #fcfcfc;
   --primary-color: #4756df;
   --secondary-color: #ff7235;
-  --primary-shadow: #8b8eaf;
+  /* --primary-shadow: #8b8eaf; */
+  --primary-shadow: #387530;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
@@ -249,7 +250,8 @@ margin-bottom: 9px;
   gap: 8.5rem;
   /* max-width: 68.75rem; */
   margin: auto;
-  background-color: skyblue;
+  /* background-image: url('./img/about_back.jpg'); */
+  background-color: #06350f;
 }
 .hero img {
   height: 57.5rem;
@@ -318,6 +320,96 @@ margin-bottom: 9px;
 
 /* about end */
 
+/*team start */
+.container{
+    background: #06350f;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:10px;
+    width:100%;
+    margin-left:0px;
+    margin-right:0px;
+    min-width: -webkit-fill-available;
+}
+.container .section-title{
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: cursive;
+  color: #318D44;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.our-team{
+    padding: 20px 15px 30px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    margin:12px;
+}
+.our-team .pic{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 25px;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .pic{
+    background: #318D44;
+    border-radius: 50%;
+}
+.pic img{
+    width: 100%;
+    height: 180px;
+    border-radius: 50%;
+}
+.our-team .title{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2e282a;
+    text-transform: uppercase;
+    margin: 0 0 7px 0;
+}
+.our-team .post{
+    display: block;
+    font-size: 15px;
+    color: #318D44;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.our-team .social{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.our-team .social li{
+    display: inline-block;
+    margin-right: 5px;
+}
+.our-team .social li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 15px;
+    color:#318D44;
+    border: 1px solid #318D44;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social li a{
+    background: #318D44;
+    color: #fff;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+
+/* team end  */
+
 
 
 /* footer start*/
@@ -326,7 +418,7 @@ footer{
     width: 100%;
     background: linear-gradient(to right,#06350f, #1f7d32);
     color: #fff;
-    padding: 50px 0 30px;
+    padding: 50px 0 30px 50px;
     font-size: 13px;
     line-height: 20px;
 }
