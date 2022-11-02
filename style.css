@@ -189,7 +189,7 @@ margin-bottom: 9px;
     position: absolute;
     top: 0;
     left: 0;
-    z-index:10000;
+    z-index:999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,7 +251,7 @@ margin-bottom: 9px;
   /* max-width: 68.75rem; */
   margin: auto;
   /* background-image: url('./img/about_back.jpg'); */
-  background-color: #06350f;
+  background-color: #ccf7e4;
 }
 .hero img {
   height: 57.5rem;
@@ -322,10 +322,10 @@ margin-bottom: 9px;
 
 /*team start */
 .container{
-    background: #06350f;
+    background: #ccf7e4;
     padding:10px;
-    margin-top:5px;
-    margin-bottom:10px;
+    /* margin-top:5px; */
+    /* margin-bottom:10px; */
     width:100%;
     margin-left:0px;
     margin-right:0px;
@@ -410,6 +410,22 @@ margin-bottom: 9px;
 
 /* team end  */
 
+
+
+/* social media sticky */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 4rem;
+  height: 4rem;
+  
+}
 
 
 /* footer start*/
