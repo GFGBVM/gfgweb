@@ -439,7 +439,7 @@ margin-bottom: 9px;
   }
 
   .swiper-pagination {
-      transform: translate(-4.4rem, -5rem) !important;
+      transform: translate(-4.4rem, -2rem) !important;
   }
 }
 
@@ -547,6 +547,10 @@ margin-bottom: 9px;
 }
 @media only screen and (max-width: 990px){
     .our-team{ margin-bottom: 30px; }
+    /* .pic img{
+      height: 150px;
+      width:100px;
+    } */
 }
 
 /* team end  */
@@ -567,6 +571,33 @@ margin-bottom: 9px;
   height: 6rem;
   
 }
+
+
+/* Contact start  */
+
+.contact-body{
+
+  background-color: #ccf7e4;
+  padding-bottom:15px;
+}
+#contact-form {
+  width: 650px;
+  height: 677px;
+  margin-bottom:15px;
+}
+
+#contact-form::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.contact-body {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contact end */
+
 
 
 /* footer start*/
