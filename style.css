@@ -96,6 +96,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #ccf7e4;
+  box-shadow: 0 18px 16px -16px black;
 }
 
 .header h1{
@@ -252,8 +253,7 @@ margin-bottom: 9px;
   margin: auto;
   background-image: url('./img/About_background.jpg');
   background-size: cover;
-  background-color: none;
-  background-blend-mode: soft-light;
+  background-repeat: none ;
   /* opacity:0.5; */
   background-color: #ccf7e4;
   height:635px;
@@ -487,11 +487,16 @@ margin-bottom: 9px;
     padding: 10px;
     margin-bottom: 5px;
     transition: all 0.5s ease 0s;
-
     /* background: #318D44; */
     border-radius: 10%;
     /* transform: translateY(-35px); */
 }
+
+.our-team .pic img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0%;
+}
+
 /* .our-team:hover .pic{
     background: #318D44;
     border-radius: 10%;
