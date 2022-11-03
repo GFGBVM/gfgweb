@@ -592,7 +592,9 @@ margin-bottom: 9px;
 /* Contact start  */
 
 .contact-body{
-  background-color: #318d42;
+  background-image: url("img/Contact-us.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-bottom:15px;
 }
 #contact-form {
