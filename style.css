@@ -334,9 +334,7 @@ margin-bottom: 9px;
   align-items: center;
   position: relative;
   flex-direction: column;
-  background-color: #ccf7e4 ;
-  /* background-image: url('./img/section-bg.webp'); */
-  background-color: #318d42;
+  background-image: url('./img/Event.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
