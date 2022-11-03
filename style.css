@@ -95,7 +95,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e7f5ff;
+  background-color: #ccf7e4;
 }
 
 .header h1{
@@ -185,7 +185,7 @@ margin-bottom: 9px;
     /* display: none; */
     width: 100%;
     height: 100vh;
-    background: #e7f5ff;
+    background: #ccf7e4;
     position: absolute;
     top: 0;
     left: 0;
@@ -231,7 +231,7 @@ margin-bottom: 9px;
   }
 
   .header .logo {
-    width: 25%;
+    width: 35%;
   }
   .header h1{
     font-size: 23px;
@@ -250,8 +250,11 @@ margin-bottom: 9px;
   gap: 8.5rem;
   /* max-width: 68.75rem; */
   margin: auto;
-  /* background-image: url('./img/about_back.jpg'); */
+  background-image: url('./img/about_back.jpg');
+  background-blend-mode: soft-light;
+  /* opacity:0.5; */
   background-color: #ccf7e4;
+  height:635px;
 }
 .hero img {
   height: 57.5rem;
@@ -306,7 +309,8 @@ margin-bottom: 9px;
   .bio {
     margin-top: -7rem;
     width: 28.5rem;
-    margin-bottom:10px;
+    margin-top: -40px;
+    margin-bottom:40px; 
   }
   .bio-title{
     font-size:19px;
@@ -439,7 +443,7 @@ margin-bottom: 9px;
   }
 
   .swiper-pagination {
-      transform: translate(-4.4rem, -2rem) !important;
+      transform: translate(-8.4rem, -2rem) !important;
   }
 }
 
@@ -564,6 +568,7 @@ margin-bottom: 9px;
   position: fixed;
   left: 1%;
   bottom: 40%;
+  z-index:999;
 }
 
 .socicon {
