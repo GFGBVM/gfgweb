@@ -320,6 +320,132 @@ margin-bottom: 9px;
 
 /* about end */
 
+/* Events start  */
+
+.swiper-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  background-color: #ccf7e4 ;
+  /* background-image: url('./img/section-bg.webp'); */
+  background-color: #318d42;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 80rem;
+}
+
+.events-head {
+  color: white;
+  font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  transform: translateY(-40px);
+}
+
+#events-head-img {
+  width: 40rem;
+  transform: rotate(-2deg) translateY(-2.7rem);
+}
+
+.swiper {
+  height: 50rem;
+  width: 135rem;
+  /* padding:0px; */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  /* margin:2px; */
+  padding:5px;
+  border-radius: 15px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: initial;
+  border-radius:15px;
+}
+
+.swiper-pagination {
+  transform: translate(-4.4rem, -5.5rem) !important;
+}
+
+.swiper-pagination-bullet {
+  height: 20px !important;
+  width: 20px !important;
+  background: white !important;
+  opacity: 0.3 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+@media screen and (max-width:1500px) {
+  .swiper {
+      height: calc(70vw / 2);
+      width: 70vw;
+  }
+
+  .swiper-body {
+      height: calc(70vw / 2 + 23rem);
+  }
+
+  #events-head-img {
+      width: 35rem;
+      transform: rotate(-2deg) translateY(-2.5rem);
+  }
+
+  .swiper-pagination {
+      transform: translate(-4.4rem, -4.3rem) !important;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .swiper {
+      height: calc(100vw - 3rem);
+      width: calc(100vw - 3rem);
+  }
+
+  .swiper-body {
+      height: calc(100vw - 3rem + 23rem);
+  }
+
+  #events-head-img {
+      width: 95vw;
+      max-width: 35rem;
+      transform: rotate(-2deg) translateY(-1rem);
+  }
+
+  .swiper-pagination {
+      transform: translate(-4.4rem, -5rem) !important;
+  }
+}
+
+/* Events end */
+
+
 /*team start */
 .container{
     background: #ccf7e4;
