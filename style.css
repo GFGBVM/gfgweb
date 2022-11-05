@@ -355,10 +355,10 @@ margin-bottom: 9px;
 }
 
 #events-head-img {
-  /* width: 40rem; */
+  width: 40rem;
   font-size:70px;
   font-family: cursive;
-  /* transform: rotate(-2deg) translateY(-2.7rem); */
+  transform: rotate(-2deg) translateY(-2.7rem);
 }
 
 .swiper {
@@ -622,7 +622,12 @@ margin-bottom: 9px;
   font-family: cursive;
   color:white;
 }
+.contact-form >iframe{
+  width:40vmax;
+  height: 70vmax;
+  align-self: auto;
 
+}
 @media screen and (max-width:900px) {
   .contact-head h1{
     width:100%;
@@ -636,6 +641,8 @@ margin-bottom: 9px;
     height: 1777px;
     margin-bottom:15px;
   }
+
+
 }
 
 /* Contact end */
