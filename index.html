@@ -313,17 +313,27 @@
   <!-- team ends  -->
 
   <!-- Contact us section -->
+
   <section id="contact-us-loc" class="contact-body">
     <div class="contact-head">
       <img id="contact-head-img" src="./img/Contact-Us-sticker.gif">
       <!-- <h1 id="contact-heading">CONTACT US</h1> -->
     </div>
     <div class="contact-form">
-      <iframe
+      <!-- <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSfF5G6cvm5p2Wvrpia5ujja6lPrUmsRz7s9oAZjWc_DW6Vrug/viewform?embedded=true"
-        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        <form onsubmit="sendEmail(); reset(); return false;">
+          <input name="name" type="text" class="feedback-input" id="name" placeholder="Name" />
+          <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" />
+          <textarea name="text" class="feedback-input" id="message" placeholder="Comment"></textarea>
+          <input type="submit" value="SUBMIT"/>
+        </form>
     </div>
   </section>
+
+
+
 
   <!-- footer starts  -->
   <footer>
@@ -379,6 +389,8 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://kit.fontawesome.com/879cf924f2.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="./contact.js"></script>
   <script src="index.js"></script>
 </body>
 
