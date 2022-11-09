@@ -774,12 +774,12 @@ footer .copyright{
 .bottom_line span{
     width: 15px;
     height: 100%;
-    background: #f66335;
+    /* background: #f66335; */
     border-radius: 3px;
     position: absolute;
     top: 0;
-    left: 10px;
-    animation: moveline 2s linear infinite;
+    /* left: 10px; */
+    /* animation: moveline 2s linear infinite; */
 }
 @keyframes moveline{
     0%{
@@ -788,4 +788,33 @@ footer .copyright{
     100%{
         left:100%;
     }
+}
+
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #318D44;
+  background-color: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.fa-twitter:hover{
+  background-color: #1da1f2;
+  color: #fff;
+}
+.fa-linkedin:hover{
+  background-color: #0e76a8;
+  color: #fff;
+}
+.fa-facebook:hover{
+  background-color: #4267b2;
+  color: #fff;
+}
+.fa-instagram:hover{
+  background: linear-gradient(to top, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  color: #fff;
 }
