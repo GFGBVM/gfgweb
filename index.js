@@ -39,25 +39,25 @@ var swiper = new Swiper(".mySwiper", {
 // Events end
 
 // Contacts start
-var iframe = document.getElementById("contact-form");
-iframe.scrolling = "no";
+// var iframe = document.getElementById("contact-form");
+// iframe.scrolling = "no";
 
-const checkActive = () => {
-    console.log("ran");
-    if (document.activeElement.id == "contact-form")
-        iframe.scrolling = "yes";
-}
+// const checkActive = () => {
+//     console.log("ran");
+//     if (document.activeElement.id == "contact-form")
+//         iframe.scrolling = "yes";
+// }
 
-var observer = new IntersectionObserver(function (entries) {
-    if (entries[0].isIntersecting === true) {
-        window.addEventListener('blur', checkActive);
-    } else {
-        window.removeEventListener('blur', checkActive);
-        iframe.scrolling = "no";
-    }
-}, { threshold: [0] });
+// var observer = new IntersectionObserver(function (entries) {
+//     if (entries[0].isIntersecting === true) {
+//         window.addEventListener('blur', checkActive);
+//     } else {
+//         window.removeEventListener('blur', checkActive);
+//         iframe.scrolling = "no";
+//     }
+// }, { threshold: [0] });
 
-observer.observe(document.querySelector("#contact-form"));
+// observer.observe(document.querySelector("#contact-form"));
 // Contacts end
 
 

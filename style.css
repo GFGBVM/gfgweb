@@ -51,7 +51,7 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
-    z-index: 100000;
+    z-index: 100;
     transition: opacity 300ms ease-in-out;
   }
   
@@ -436,7 +436,7 @@ margin-bottom: 9px;
 
 @media screen and (max-width:900px) {
   .swiper {
-      height: calc(100vw - 3rem);
+      height: calc(100vw - 0.5rem);
       width: calc(100vw - 3rem);
   }
 
@@ -448,10 +448,15 @@ margin-bottom: 9px;
       width: 95vw;
       max-width: 35rem;
       transform: rotate(-2deg) translateY(-1rem);
+      
   }
 
   .swiper-pagination {
-      transform: translate(-7.5rem, -2rem) !important;
+      transform: translate(-7.5rem, -0.5rem) !important;
+  }
+
+  #events{
+    padding-top:3.5vmax;
   }
 }
 
@@ -636,15 +641,22 @@ margin-bottom: 9px;
     width:100%;
     align-self: center;
     justify-content: center;
-
     margin-left:40px;
   }
   #contact-form {
     width: 450px;
     height: 1777px;
     margin-bottom:15px;
+    
+  }
+  .contact-body{
+    background-image: none;
+    background-color: #ccf7e4;
   }
 
+  .contact-form{
+    margin:2vmax;
+  }
 
 }
 
