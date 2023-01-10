@@ -709,7 +709,13 @@ textarea {
 
 /* Contact end */
 
-
+.g1{
+  border-radius: 50%;
+  border: 3px black;
+  margin-top: -25px;
+  margin-bottom: 0px;
+  margin-left: 80%;
+}
 
 /* footer start*/
 
