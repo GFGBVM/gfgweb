@@ -1,6 +1,5 @@
-*{
-    
-    background-color: #caf6e0;
+body{
+    background-color:#ccf7e4;
 }
 .container123{
     background-image: url("img/Team-back.jpg");
@@ -13,6 +12,7 @@
     margin-left:0px;
     margin-right:0px;
     min-width: -webkit-fill-available;
+    background-color: #ccf7e4;
 }
 
 .container123.section-title{
