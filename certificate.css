@@ -1,3 +1,7 @@
+*{
+    
+    background-color: #caf6e0;
+}
 .container123{
     background-image: url("img/Team-back.jpg");
     background-size: cover;
@@ -24,9 +28,7 @@
 .card-text{
     margin-top: -20px;
 }
-.hero{
-    background-color: #caf6e0;
-}
+
 @media (max-width: 62em) {
     .hero{
     margin-top:30rem;
