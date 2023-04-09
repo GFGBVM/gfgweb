@@ -464,7 +464,7 @@ margin-bottom: 9px;
 
 
 /*team start */
-.container{
+.container_team{
     background-image: url("img/Team-back.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -476,7 +476,7 @@ margin-bottom: 9px;
     margin-right:0px;
     min-width: -webkit-fill-available;
 }
-.container .section-title{
+.container_team .section-title{
   text-align: center;
   font-size: 45px;
   font-weight: bold;
