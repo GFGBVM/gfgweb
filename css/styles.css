@@ -12717,6 +12717,10 @@ p {
   margin-right: 10px;
 }
 
+#mainNav .navbar-brand p {
+  font-size: 20px;
+}
+
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
@@ -12746,6 +12750,10 @@ p {
   #mainNav .navbar-brand img {
     height: 4rem;
     transition: height 0.3s ease-in-out;
+  }
+
+  #mainNav .navbar-brand p {
+    font-size: medium;
   }
 
   #mainNav.navbar-shrink {
