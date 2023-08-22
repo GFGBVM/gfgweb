@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GFG Student Chapter | Birla Vishvakarma Mahavidyalaya (BVM)</title>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+  <!-- Favicons -->
+  <link rel="GFG Student Chapter BVM" sizes="180x180" href="./img/logo.png" />
+  <link rel="icon" type="image/png" sizes="62x62" href="./img/logo.png" />
+
+  <!-- Animate CSS CDN -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Past events carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Loading screen -->
+  <div id="loader_block">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <header class="header">
+    <img src="./img/logo.png" alt="GFG Student Chapter | Birla Vishvakarma Mahavidyalaya (BVM) Logo" class="logo" />
+    <h1>GFG Student Chapter BVM</h1>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><a class="navbar-link" href="#about">About Us</a></li>
+        <li><a class="navbar-link" href="#events">Events</a></li>
+        <li><a class="navbar-link" href="#team">Team</a></li>
+        <li><a class="navbar-link" href="./certificate.html">Certificates</a></li>
+        <li id="contact"><a class="navbar-link" href="#contact-us-loc">Contact Us</a></li>
+        <li id="contact"><a class="navbar-link" href="https://gfgbvm.github.io/UI-UX/">UI-UX Workshop</a></li>
+        
+
+
+      </ul>
+    </nav>
+
+    <div class="mobile-navbar-btn">
+      <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+      <!-- <ion-icon ></ion-icon> -->
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>
+  </header>
+
+
+
+  <section class="hero" id="about">
+    <img src="./img/about_img.png" alt="GFG Student Chapter BVM" loading="lazy" class="hero-img" />
+    <div class="bio animate__animated animate__shakeX">
+      <div class="welcome">
+        <p class="bio-title" style="color:white">Welcome to</p>
+        <p class="bio-title" style="color:#caf6e0">GeeksforGeeks</p>
+        <p class="bio-title" style="color:white"> STUDENT</p>
+        <p class="bio-title" style="color:white;display:inline">CHAPTER</p>
+        <p class="bio-title" style="color:#caf6e0;display:inline">BVM</p>
+      </div>
+      <p class="bio-text">
+        At GFG Student Chapter BVM we are here to provide the coding culture for the students who are interested in
+        Computer Science and other core technical competencies. We will provide you the opportunities to enhance your
+        coding skills and take them to the next level.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Past events section -->
+  <section id="events" class="swiper-body">
+    <div class="events-head">
+      <!-- <h1 id="events-head-img">PAST EVENTS</h1> -->
+      <img id="events-head-img" src="./img/Past_event_sticker-removebg-preview.png">
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./assets/events/Subh_IT_Arambh.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/Auto_Run.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/RoadMap_To_DSA.jpeg"></div>        
+        <div class="swiper-slide"><img src="./assets/events/Codigo.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/Web_Linguistics.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/Subh_IT_Arambh.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/Auto_Run.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/RoadMap_To_DSA.jpeg"></div>        
+        <div class="swiper-slide"><img src="./assets/events/Codigo.jpeg"></div>
+        <div class="swiper-slide"><img src="./assets/events/Web_Linguistics.jpeg"></div>
+        
+
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- team starts  -->
+  <section id="team" class="team">
+    <div class="container_team">
+      <p class="section-title">
+        <img src="img/Team-11.gif" alt="Team">
+      </p>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Prachi Shah Mam.jpeg">
+            </div>
+            <h3 class="title">Prachi Shah</h3>
+            <span class="post">Faculty Advisor</span>
+            <ul class="social">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Yaksh Shah.jpg">
+            </div>
+            <h3 class="title">Yaksh Shah</h3>
+            <span class="post">Chairperson</span>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/mr.shah17?r=nametag" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/yaksh-shah-8734711bb/" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Rishabh Parmar.jpg">
+            </div>
+            <h3 class="title">Rishabh Parmar</h3>
+            <span class="post">Vice Chairperson</span>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/rishabhpar7/?hl=en" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/rishabh-parmar-650541200/" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Dhyey Badheka.jpg">
+            </div>
+            <h3 class="title">Dhyey Badheka</h3>
+            <span class="post">Tech Head</span>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/dhyey.badheka/?hl=en" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/dhyey-badheka" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Sheel Pandya.jpg">
+            </div>
+            <h3 class="title">Sheel Pandya</h3>
+            <span class="post">Tech Person</span>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/pandyasheel416/" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/sheel-pandya-160458219/" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Harsh Soni.jpeg">
+            </div>
+            <h3 class="title">Harsh Soni</h3>
+            <span class="post">Graphics Designing Head</span>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/hpsoni_14/" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/harsh-soni-89913b219" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Srushti Engineer.jpg">
+            </div>
+            <h3 class="title">Srushti Engineer</h3>
+            <span class="post">Jr. Graphics Designer</span>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/eng.srushti/" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/srushti-engineer-b56213222" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Kavya Dave.jpg">
+            </div>
+            <h3 class="title">Kavya Dave</h3>
+            <span class="post">PR and Outreach Head</span>
+            <ul class="social">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/kavya-dave-b84920232" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Harsh Mehta.jpg">
+            </div>
+            <h3 class="title">Harsh Mehta</h3>
+            <span class="post">PR and Outreach Member</span>
+            <ul class="social">
+              <li><a href="https://instagram.com/hars.hm?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/harsh-mehta-aa90931a8" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Avni Rohit.png">
+            </div>
+            <h3 class="title">Avni Rohit</h3>
+            <span class="post">Social Head</span>
+            <ul class="social">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Nandan Jariwala.jpeg">
+            </div>
+            <h3 class="title">Nandan Jariwala</h3>
+            <span class="post">Events Head</span>
+            <ul class="social">
+              <li><a href="https://instagram.com/007.jari" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/nandan-jariwala-110470205" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="./img/team/Neel Parekh.jpg">
+            </div>
+            <h3 class="title">Neel Parekh</h3>
+            <span class="post">Marketing Head</span>
+            <ul class="social">
+              <li><a href="https://instagram.com/neelparekh17?igshid=YmMyMTA2M2Y=" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="https://www.linkedin.com/in/neel-parekh-18409a241" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="socials">
+    <a href="https://twitter.com/GfgBvm" target="_blank"><img src="./img/icons/Twitter.svg" alt="Twitter" loading="lazy"
+        class="socicon" /></a>
+    <a href="https://www.instagram.com/gfgbvm/" target="_blank"><img src="./img/icons/Instagram.svg" alt="Instagram"
+        loading="lazy" class="socicon" /></a>
+    <a href="https://www.linkedin.com/in/gfg-student-chapter-bvm-643736253/" target="_blank"><img style="width:5.5rem"
+        src="./img/icons/LinkedIn.svg" alt="Linkedin" loading="lazy" class="socicon" /></a>
+    <a href="https://www.facebook.com/profile.php?id=100086765362390" target="_blank"><img
+        src="./img/icons/Facebook.svg" alt="Facebook" class="socicon" /></a>
+  </div>
+
+  <!-- team ends  -->
+
+  <!-- Contact us section -->
+
+  <section id="contact-us-loc" class="contact-body">
+    <div class="contact-head">
+      <img id="contact-head-img" src="./img/Contact-Us-sticker.gif">
+      <!-- <h1 id="contact-heading">CONTACT US</h1> -->
+    </div>
+    <div class="contact-form">
+      <!-- <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfF5G6cvm5p2Wvrpia5ujja6lPrUmsRz7s9oAZjWc_DW6Vrug/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+        
+          <input name="name" type="text" class="feedback-input" id="name" placeholder="Name"  required/>
+          <input name="email" type="text" class="feedback-input" id="email" placeholder="Email"  required/>
+          <textarea name="text" class="feedback-input" id="message" placeholder="Comment" required></textarea>
+          <input type="submit" value="SUBMIT" onclick="sendMail()"/>
+        
+    </div>
+  </section>
+
+
+
+
+  <!-- footer starts  -->
+  <footer>
+    <div class="row">
+      <div class="col">
+        <img src="./img/logo.png" class="footer_logo">
+        <p class="footer_about">At GFG Student Chapter BVM we are here to provide the coding culture for the students
+          who are interested in Computer Science and other core technical competencies. We will provide you the
+          opportunities to enhance your coding skills and take them to the next level.
+
+        </p>
+      </div>
+      <div class="col">
+        <h3>Reach Us <div class="bottom_line"><span></span></div>
+        </h3>
+        <a href="https://maps.app.goo.gl/v77KgjDFfa6Vgiq39">
+          <p style="line-height:0.5">Birla Vishvakarma Mahavidyalaya</p>
+          <p>Post Box No. 20,Vallabh Vidyanagar,Anand </p>
+        </a>
+        <p class="footer_email"><a href="geeksforgeeksbvm@bvmengineering.ac.in">
+            geeksforgeeksbvm@bvmengineering.ac.in</a></p>
+        <h4>+91 88660 19116</h4>
+      </div>
+      <div class="col">
+        <h3>Links <div class="bottom_line"><span></span></div>
+        </h3>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#events">EVENTS</a></li>
+          <li><a href="#team">TEAM</a></li>
+          <li><a href="./certificate.html">CERTIFICATE</a></li>
+          <li><a href="#contact-us-loc">CONTACT US</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Follow Us<div class="bottom_line"><span></span></div>
+        </h3>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/gfg-student-chapter-bvm-643736253/"><i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com/GfgBvm"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100086765362390"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/gfgbvm/"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">GeeksForGeeks BVM © 2022 | All Rights Reserved</p>
+  </footer>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/879cf924f2.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="./contact.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.rt34{
+    width: 250px ;
+    margin-left: -100px;
+    margin-bottom: 100px;
+}
+.welcome-text-2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 720px) {
+    .rt34{
+        margin-bottom: 30px;
+        margin-left: 15px;
+    }
+  }
