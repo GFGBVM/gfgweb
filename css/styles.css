@@ -12713,8 +12713,8 @@ p {
 }
 
 #mainNav .navbar-brand img {
-  height: 3rem;
-  margin-right: 10px;
+  height: 2.5rem;
+  margin-right: 5px;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -12760,7 +12760,7 @@ p {
 
   #mainNav.navbar-shrink .navbar-brand svg,
   #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 1.7rem;
   }
 
   #mainNav .navbar-nav .nav-item {
