@@ -695,6 +695,10 @@ progress {
   margin-left: auto;
 }
 
+.nav-container{
+  margin-left: 8%;
+}
+
 .welcome-1 {
   display: flex;
 }
@@ -4329,7 +4333,9 @@ fieldset:disabled .btn {
 .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
 }
-
+.navbar-brand a{
+  margin-right: 10%;
+}
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
@@ -4415,6 +4421,7 @@ fieldset:disabled .btn {
 }
 
 .logo{
+  margin-right: 8%;
   border-radius: 50%;
 }
 
