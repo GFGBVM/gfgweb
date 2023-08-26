@@ -13512,6 +13512,12 @@ footer .copyright {
   transition: transform 0.5s;
 } */
 
-.container2:hover .logo-image {
-  transform: rotateX(0deg) rotateY(0deg);
+.logo-image{
+  transition: width 2s, height 2s , transform 2s;
+}
+
+.logo-image:hover {
+  width:320px;
+  height: 320px;
+  transform: rotate(360deg);
 }
