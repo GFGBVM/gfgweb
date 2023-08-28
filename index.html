@@ -27,13 +27,42 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container nav-container">
-            <a class="navbar-brand logo" href="#page-top"><img src="logo2.jpg" alt="..." class="logo" />
-                GeeksforGeeks BVM </a>
+            <a class="navbar-brand" href="#page-top"><img src="logo2.jpg" alt="..." class="logo" />
+                GeeksForGeeks BVM </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <!--menu-->
                 <i class="fas fa-bars ms-1"></i>
             </button>
+
+            <!-- <script>
+                // Check if the media query matches
+                function checkMediaQuery() {
+                    if (window.matchMedia("(max-width: 768px)").matches) {
+                        // Change the logo text when the media query is active
+                        document.querySelector('.logo').textContent = 'GFG BVM';
+                    } else {
+                        // Revert the logo text when the media query is not active
+                        document.querySelector('.logo').textContent = 'GeeksforGeeks BVM';
+                    }
+                }
+
+                // Add an event listener to check the media query when the page loads or resizes
+                window.addEventListener('load', checkMediaQuery);
+                window.addEventListener('resize', checkMediaQuery);
+            </script> -->
+
+            <!-- <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Find the anchor element with the class "navbar-brand logo"
+                    var anchorElement = document.querySelector(".navbar-brand.logo");
+
+                    // Change the text content of the anchor element
+                    if (anchorElement) {
+                        anchorElement.textContent = "GFG BVM";
+                    }
+                }); -->
+            </script>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>

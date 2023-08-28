@@ -4428,6 +4428,19 @@ fieldset:disabled .btn {
   border-radius: 50%;
 }
 
+/* @media (max-width: 990px) {
+  .navbar-brand.logo {
+    content: "";
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand.logo {
+    content: "GFG BVM";
+  }
+} */
+
+
 @media (min-width: 576px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
@@ -6186,6 +6199,7 @@ fieldset:disabled .btn {
     --bs-modal-width: 800px;
   }
 }
+
 
 @media (min-width: 1200px) {
   .modal-xl {
@@ -13512,12 +13526,12 @@ footer .copyright {
   transition: transform 0.5s;
 } */
 
-.logo-image{
-  transition: width 2s, height 2s , transform 2s;
+.logo-image {
+  transition: width 2s, height 2s, transform 2s;
 }
 
 .logo-image:hover {
-  width:320px;
+  width: 320px;
   height: 320px;
   transform: rotate(360deg);
 }
