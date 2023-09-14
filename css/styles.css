@@ -4442,7 +4442,7 @@ fieldset:disabled .btn {
 
 @media (max-width: 768px) {
   .navbar-brand {
-    margin-right:0px;
+    margin-right: 0px;
   }
 }
 
@@ -12740,7 +12740,7 @@ p {
   font-weight: 600;
   letter-spacing: 0.0525em;
   text-transform: uppercase;
-  font-size:16px;
+  font-size: 16px;
 }
 
 #mainNav .navbar-brand img {
@@ -13517,29 +13517,4 @@ footer .copyright {
 .footer-font {
 
   font-size: 0.8rem;
-}
-
-
-/* .container2 {
-  perspective: 1000px;
-  width: 200px;
-  height: 200px;
-  margin: 100px auto;
-}
-
-.logo-image {
-  width: 100%;
-  transform: rotateX(20deg) rotateY(30deg);
-  transform-origin: center center;
-  transition: transform 0.5s;
-} */
-
-.logo-image {
-  transition: width 2s, height 2s, transform 2s;
-}
-
-.logo-image:hover {
-  width: 320px;
-  height: 320px;
-  transform: rotate(360deg);
 }
