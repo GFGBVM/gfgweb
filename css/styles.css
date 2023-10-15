@@ -35,7 +35,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #a6e86d;
+  --bs-primary: #264907;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -9124,7 +9124,7 @@ fieldset:disabled .btn {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #a6e86d !important;
+  color: #3e7e00;
 }
 
 .position {
