@@ -12830,7 +12830,7 @@ header.masthead {
   background-size: cover;
   height: 100vh;
   display: flex;
-  display-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
