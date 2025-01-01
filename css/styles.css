@@ -12847,14 +12847,9 @@ header.masthead {
   position: fixed;
   left: 1%;
   bottom: 40%;
-  z-index: 999;
+  z-index: 900;
 }
 
-.socicon {
-  width: 3.5rem;
-  height: 3.5rem;
-
-}
 
 
 
