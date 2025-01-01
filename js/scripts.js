@@ -7,6 +7,11 @@
 // Scripts
 // 
 
+//navigate to event-details page
+
+function navigateToDetails() {
+    window.location.href = "/event-details.html";
+}
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -52,3 +57,25 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+    function downloadReport() {
+        // Create an anchor element dynamically
+        const link = document.createElement('a');
+        
+        // Set the href to the path of the report file
+        link.href = "./assets-2024/events/meet_with_geeks/MeetWGeeks.pdf"; // Replace with your actual file path
+        
+        // Set the download attribute to specify the file name
+        link.download = "Event_Report.pdf"; // The name you want for the downloaded file
+        
+        // Append the anchor to the document
+        document.body.appendChild(link);
+        
+        // Programmatically click the anchor to trigger the download
+        link.click();
+        
+        // Remove the anchor from the document
+        document.body.removeChild(link);
+    }
+
