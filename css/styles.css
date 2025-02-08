@@ -4392,6 +4392,18 @@ fieldset:disabled .btn {
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
 }
+.my-element {
+  width: 50vw;
+  height: 77vh;
+}
+
+/* Style for mobile devices (screen width up to 768px) */
+@media (max-width: 768px) {
+  .my-element {
+    width: 90vw;
+    height: 55vh;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {

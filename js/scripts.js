@@ -60,22 +60,19 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     function downloadReport() {
-        // Create an anchor element dynamically
         const link = document.createElement('a');
-        
-        // Set the href to the path of the report file
-        link.href = "./assets-2024/events/meet_with_geeks/MeetWGeeks.pdf"; // Replace with your actual file path
-        
-        // Set the download attribute to specify the file name
-        link.download = "Event_Report.pdf"; // The name you want for the downloaded file
-        
-        // Append the anchor to the document
+        link.href = "./assets-2024/events/meet_with_geeks/MeetWGeeks.pdf"; 
+        link.download = "Event_Report.pdf";
         document.body.appendChild(link);
-        
-        // Programmatically click the anchor to trigger the download
         link.click();
-        
-        // Remove the anchor from the document
+        document.body.removeChild(link);
+    }
+    function downloadReport1() {
+        const link = document.createElement('a');
+        link.href = "./assets-2024/events/Cyber_Geeks/cybergeekpdf"; 
+        link.download = "Event_Report.pdf";
+        document.body.appendChild(link);
+        link.click();
         document.body.removeChild(link);
     }
 
