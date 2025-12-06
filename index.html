@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="utf-8" />
@@ -7,117 +7,185 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>GFG BVM 2025</title>
-    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- bootstarp added -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/styles2.css" rel="stylesheet" />
     <style>
+        /* Ensures the fixed navbar doesn't cover section headers when scrolling */
+        html {
+            scroll-padding-top: 80px;
+        }
+
         .portfolio-item {
             cursor: pointer;
         }
+
+        /* Desktop Dropdown Animation */
+        #desktop-flashback-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+        }
+
+        #desktop-flashback-menu.show {
+            display: block !important;
+            opacity: 1 !important;
+            transform: translateY(0);
+        }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="css/event_css.css"> -->
-  <script src="https://cdn.tailwindcss.com"></script>
-    <link href="css/styles2.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
 
-    <!-- Favicons -->
     <link rel="GFG Student Chapter BVM" sizes="180x180" href="./logo-past.png" />
     <link rel="icon" type="image/png" sizes="62x62" href="./logo-past.png" />
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container nav-container">
-            <div class="flex items-center">
-                <img src="logo2.jpg" alt="..." class="logo" style="width: 30px;"/>
-                <a class="navbar-brand" href="#page-top">
-                    GeeksForGeeks BVM </a>
+
+    <nav class="bg-green-700 fixed w-full z-50 top-0 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <img src="logo2.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-white" />
+                    <a class="text-white font-bold text-lg tracking-wider" href="#page-top">
+                        GeeksForGeeks BVM
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-white text-sm font-bold uppercase hover:text-green-300 transition"
+                        href="#about">About</a>
+                    <a class="text-white text-sm font-bold uppercase hover:text-green-300 transition"
+                        href="#team">Team</a>
+                    <a class="text-white text-sm font-bold uppercase hover:text-green-300 transition"
+                        href="#portfolio">Events</a>
+
+                    <div class="relative" id="desktop-flashback-container">
+                        <button
+                            class="text-white text-sm font-bold uppercase hover:text-green-300 flex items-center focus:outline-none transition"
+                            id="desktop-flashback-btn">
+                            FlashBack <i class="fa fa-caret-down ml-1"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-xl py-1"
+                            id="desktop-flashback-menu">
+                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-100 hover:text-green-700"
+                                href="core-team-2022/index.html" target="_blank">2022 »</a>
+                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-green-100 hover:text-green-700"
+                                href="core-team-2023.html" target="_blank">2023 »</a>
+                        </div>
+                    </div>
+
+                    <a class="text-white text-sm font-bold uppercase hover:text-green-300 transition"
+                        href="br-team-2024.html">BR-Team</a>
+                    <a class="text-white text-sm font-bold uppercase hover:text-green-300 transition"
+                        href="#contact">Contact</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white hover:text-green-200 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <!--menu-->
-                    <i class="fas fa-bars ms-1"></i>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-green-800 w-full px-4 pt-2 pb-4 shadow-inner">
+            <a class="mobile-link block text-white font-semibold uppercase py-3 border-b border-green-700 hover:text-green-300"
+                href="#about">About</a>
+            <a class="mobile-link block text-white font-semibold uppercase py-3 border-b border-green-700 hover:text-green-300"
+                href="#team">Team</a>
+            <a class="mobile-link block text-white font-semibold uppercase py-3 border-b border-green-700 hover:text-green-300"
+                href="#portfolio">Events</a>
+
+            <div class="block border-b border-green-700">
+                <button id="mobile-flashback-btn"
+                    class="w-full text-left text-white font-semibold uppercase py-3 hover:text-green-300 flex justify-between items-center focus:outline-none">
+                    FlashBack <i class="fa fa-caret-down"></i>
                 </button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Events</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-auto-close='outside'
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            style="color: #fff; margin-top: 7px;">FlashBack</a>
-                        <ul class="dropdown-menu">
-                            <li> 
-                                <a class="dropdown-item" href="core-team-2022/index.html" target="_blank">2022 &raquo;
-                                </a>
-                            </li>
-                            <li> 
-                                <a class="dropdown-item" href="core-team-2023.html" target="_blank">2023 &raquo;
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="br-team-2024.html">BR-Team</a></li>
-                    <!--<li class="nav-item dropdown">
-                        
-                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-auto-close='outside'
-                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            style="color: #fff; margin-top: 7px;">Event Report</a>
-                        <ul class="dropdown-menu ">
-                            <li class="dropdown dropend">
-                                <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">2023</a> 
-                                    
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/1XiFqZ-P5h39y4D6WxuN9tyNX7ADhmJYM/view?usp=sharing"
-                                            target="_blank">Roadmap to DSA</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item"
-                                            href="https://drive.google.com/file/d/1M31lwZBa097a_Rf-gjHwVC2Nn_n6zPUm/view?usp=sharing"
-                                            target="_blank">Gear Up</a>
-                                    </li>
-                                </ul> 
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item"
-                                    href="https://drive.google.com/file/d/1KcTuivwoDEo6SHoSe7ZaLBi5ehtLsOl-/view?usp=sharing">2022
-                                </a>
-                            </li>
-                        </ul>
-                    </li>-->
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+                <div id="mobile-flashback-menu" class="hidden bg-green-900 rounded-lg mb-2 mx-2">
+                    <a class="mobile-link block px-4 py-3 text-sm text-gray-200 hover:text-white hover:bg-green-700 rounded-t-lg"
+                        href="core-team-2022/index.html" target="_blank">2022 Team</a>
+                    <a class="mobile-link block px-4 py-3 text-sm text-gray-200 hover:text-white hover:bg-green-700 rounded-b-lg"
+                        href="core-team-2023.html" target="_blank">2023 Team</a>
+                </div>
             </div>
+
+            <a class="mobile-link block text-white font-semibold uppercase py-3 border-b border-green-700 hover:text-green-300"
+                href="br-team-2024.html">BR-Team</a>
+            <a class="mobile-link block text-white font-semibold uppercase py-3 hover:text-green-300"
+                href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Masthead-->
-    <header class="masthead">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile Elements
+            const mobileMenuBtn = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileFlashbackBtn = document.getElementById("mobile-flashback-btn");
+            const mobileFlashbackMenu = document.getElementById("mobile-flashback-menu");
+            const mobileLinks = document.querySelectorAll(".mobile-link");
+
+            // Desktop Elements
+            const desktopFlashbackBtn = document.getElementById("desktop-flashback-btn");
+            const desktopFlashbackMenu = document.getElementById("desktop-flashback-menu");
+            const desktopContainer = document.getElementById("desktop-flashback-container");
+
+            // 1. Toggle Mobile Menu
+            mobileMenuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // 2. Toggle Mobile Dropdown (Flashback)
+            mobileFlashbackBtn.addEventListener("click", (e) => {
+                e.stopPropagation(); // Prevent triggering other clicks
+                mobileFlashbackMenu.classList.toggle("hidden");
+            });
+
+            // 3. AUTO-CLOSE LOGIC: Close mobile menu when ANY link inside it is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    // Close the main menu
+                    mobileMenu.classList.add("hidden");
+                    // Also close the flashback sub-menu just in case
+                    mobileFlashbackMenu.classList.add("hidden");
+                });
+            });
+
+            // 4. Desktop Dropdown Logic
+            desktopFlashbackBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                desktopFlashbackMenu.classList.toggle("show");
+            });
+
+            // Close Desktop dropdown if clicking outside
+            document.addEventListener("click", (e) => {
+                if (!desktopContainer.contains(e.target)) {
+                    desktopFlashbackMenu.classList.remove("show");
+                }
+            });
+
+            // Close Desktop dropdown on Scroll
+            window.addEventListener("scroll", () => {
+                desktopFlashbackMenu.classList.remove("show");
+            });
+        });
+    </script>
+
+    <header class="masthead pt-20">
         <div class="container heading">
             <div class="masthead-subheading">GeeksforGeeks Student Chapter BVM</div>
         </div>
     </header>
 
-    <!-- About US-->
     <section class="page-section" id="about">
         <div class="container">
             <div class="text-center">
@@ -146,7 +214,6 @@
         </div>
     </section>
 
-    <!-- Team-->
     <section class="page-section bg-light" id="team">
         <div class="container">
             <div class="text-center">
@@ -158,7 +225,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img class="object-fit-cover mx-auto rounded-circle" src="assets/Member/Prachi Shah Mam.jpeg" alt="..." />
+                        <img class="object-fit-cover mx-auto rounded-circle" src="assets/Member/Prachi Shah Mam.jpeg"
+                            alt="..." />
                         <h4>Prof. Prachi Shah</h4>
                         <p class="text-muted position">Faculty Advisor</p>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i
@@ -171,7 +239,8 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img class="object-fit-cover mx-auto rounded-circle" src="assets-2024/core-team-images/Harsh_Mehta.jpg" alt="..." />
+                        <img class="object-fit-cover mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Harsh_Mehta.jpg" alt="..." />
                         <h4>Harsh Mehta</h4>
                         <p class="text-muted position">Student Mentor</p>
                         <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i
@@ -182,40 +251,30 @@
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <!-- <div class="col-lg-4">
-                    <div class="team-member">
-                        <img class="object-fit-cover mx-auto rounded-circle" src="./assets-2024/core-team-images/Harsh_Mehta.jpg" alt="..." />
-                        <h4>Harsh Mehta</h4>
-                        <p class="text-muted position">Student Mentor</p>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div> -->
 
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Rahul Parmar Chairperson.png" alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Rahul Parmar Chairperson.png" alt="..." />
                         <h4>Rahul Parmar</h4>
                         <p class="text-muted">Chairperson</p>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/imrahulofficialzx/"
+                            target="_blank" aria-label="Rahul Parmar instagram Profile"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/rahul_parmar325?s=08"
+                            target="_blank" aria-label="Rahul Parmar Facebook Profile"><i
+                                class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2"
-                            href="https://www.instagram.com/imrahulofficialzx/" target="_blank"
-                            aria-label="Rahul Parmar instagram Profile"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2"
-                            href="https://x.com/rahul_parmar325?s=08" target="_blank"
-                            aria-label="Rahul Parmar Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2"
-                            href="https://www.linkedin.com/in/rahul-parmar-bb3090270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                            aria-label="Rahul Parmar LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            href="https://www.linkedin.com/in/rahul-parmar-bb3090270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" aria-label="Rahul Parmar LinkedIn Profile"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="object-fit-cover mx-auto rounded-circle" src="assets-2024/core-team-images/Diya Mehta ViceChiar.png" alt="..." />
+                        <img class="object-fit-cover mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Diya Mehta ViceChiar.png" alt="..." />
                         <h4>Diya Mehta</h4>
                         <p class="text-muted">Vice-Chairperson</p>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/tooharrsh/"
@@ -231,57 +290,67 @@
 
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="object-fit-contain mx-auto rounded-circle" src="assets-2024/core-team-images/Shashi Shekhar Tech Manager.png" alt="..." />
+                        <img class="object-fit-contain mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Shashi Shekhar Tech Manager.png" alt="..." />
                         <h4>Shah Shashishekhar</h4>
                         <p class="text-muted">Tech Manager</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/shashi.__shekhar/" target="_blank"
-                            aria-label="Shah Shashishekhar instagram Profile"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/shashi.__shekhar/"
+                            target="_blank" aria-label="Shah Shashishekhar instagram Profile"><i
+                                class="fab fa-instagram"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.x.com/sashi2259"
                             aria-label="Shah Shashishekhar Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/shashishekhar59/" target="_blank"
-                            aria-label="Shah Shashishekhar LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/shashishekhar59/"
+                            target="_blank" aria-label="Shah Shashishekhar LinkedIn Profile"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Vihaa Shah Content Creator.png" alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Vihaa Shah Content Creator.png" alt="..." />
                         <h4>Vihaa Shah</h4>
                         <p class="text-muted">Content Creator</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/viiiihaaaa/"  target="_blank"
-                            aria-label="Vihaa Shah instagram Profile"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"
-                            aria-label="Vihaa Shah Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2"
-                            href="https://www.linkedin.com/in/vihaa-shah-98b71128a"  target="_blank"
-                            aria-label="Vihaa Shah LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/viiiihaaaa/"
+                            target="_blank" aria-label="Vihaa Shah instagram Profile"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Vihaa Shah Facebook Profile"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/vihaa-shah-98b71128a"
+                            target="_blank" aria-label="Vihaa Shah LinkedIn Profile"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Siddhant Rathod Graphics Head.png" alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Siddhant Rathod Graphics Head.png" alt="..." />
                         <h4>Siddhant Rathod</h4>
                         <p class="text-muted">Graphics Supervisor</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/siddhantrathod_17?utm_source=qr&igsh=MWE5NXd3MThwajFpbw=="
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.instagram.com/siddhantrathod_17?utm_source=qr&igsh=MWE5NXd3MThwajFpbw=="
                             target="_blank" aria-label="Siddhant Rathod instagram Profile"><i
                                 class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/Siddhant1500358?t=zdRD71CXXhM9yBnhVanA7A&s=09"
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://x.com/Siddhant1500358?t=zdRD71CXXhM9yBnhVanA7A&s=09"
                             aria-label="Siddhant Rathod Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/siddhant-rathod-3a05b0275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.linkedin.com/in/siddhant-rathod-3a05b0275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                             target="_blank" aria-label="Siddhant Rathod LinkedIn Profile"><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Sakshi Patel Graphics Designer.png"
-                            alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Sakshi Patel Graphics Designer.png" alt="..." />
                         <h4>Sakshi Patel</h4>
                         <p class="text-muted">Graphics Designer</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/sakshii__97?igsh=MWp2cnYxYXRuZzVpNA=="
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.instagram.com/sakshii__97?igsh=MWp2cnYxYXRuZzVpNA=="
                             aria-label="Sakshi Patel instagram Profile"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"
-                            aria-label="Sakshi Patel Facebook Profile"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Sakshi Patel Facebook Profile"><i
+                                class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2"
                             href="https://www.linkedin.com/in/dhruv-patadia-a43200286"
                             aria-label="Sakshi Patel LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
@@ -289,33 +358,35 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Himani Thattil Evenet cordinator.png" alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Himani Thattil Evenet cordinator.png" alt="..." />
                         <h4>Himani Thattil</h4>
                         <p class="text-muted">Event Coordinator</p>
                         <a class="btn btn-dark btn-social mx-2"
                             href="https://www.instagram.com/himani_thattil/profilecard/?igsh=MW82b3d5aGRocDF6MQ=="
                             target="_blank" aria-label="Himani Thattil instagram Profile"><i
                                 class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2"
-                            href="#!" target="_blank"
+                        <a class="btn btn-dark btn-social mx-2" href="#!" target="_blank"
                             aria-label="Himani Thattil Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/himani-thattil-5565b9284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.linkedin.com/in/himani-thattil-5565b9284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                             target="_blank" aria-label="Himani Thattil LinkedIn Profile"><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Tirth Gohil Marketing Cordinator.png"
-                            alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Tirth Gohil Marketing Cordinator.png" alt="..." />
                         <h4>Tirth Gohil</h4>
                         <p class="text-muted">Marketing Coordinatior</p>
                         <a class="btn btn-dark btn-social mx-2"
                             href="https://www.instagram.com/_.tirthgohil._?igsh=dGNudG1ncXBqam15" target="_blank"
                             aria-label="Tirth Gohil instagram Profile"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"
-                            aria-label="Tirth Gohil Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/tirth-gohil-742663321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Tirth Gohil Facebook Profile"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.linkedin.com/in/tirth-gohil-742663321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                             target="_blank" aria-label="Tirth Gohil LinkedIn Profile"><i
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
@@ -323,15 +394,17 @@
 
                 <div class="col-lg-4">
                     <div class="team-member position">
-                        <img class="mx-auto rounded-circle" src="assets-2024/core-team-images/Aaditya Desai Outreach Specialist.png"
-                            alt="..." />
+                        <img class="mx-auto rounded-circle"
+                            src="assets-2024/core-team-images/Aaditya Desai Outreach Specialist.png" alt="..." />
                         <h4>Aaditya Desai</h4>
                         <p class="text-muted">Outreach Specialist</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/aaditya_desai7/" target="_blank"
-                            aria-label="Aaditya Desai instagram Profile"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/aaditya_desai7/"
+                            target="_blank" aria-label="Aaditya Desai instagram Profile"><i
+                                class="fab fa-instagram"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://x.com/?lang=en" target="_blank"
                             aria-label="Aaditya Desai Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/aaditya-desai-5a25282b6/" target="_blank"
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.linkedin.com/in/aaditya-desai-5a25282b6/" target="_blank"
                             aria-label="Aaditya Desai LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
@@ -341,12 +414,16 @@
                             src="assets-2024/core-team-images/Riza Tandel Social Media Manager.JPG" alt="..." />
                         <h4>Riza tandel</h4>
                         <p class="text-muted">Social Media Manager</p>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/og_azir1224/profilecard/?igsh=MXdvZ2hoejE2aXd0ZQ==" target="_blank" aria-label="Riza tandel Twitter Profile"><i
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.instagram.com/og_azir1224/profilecard/?igsh=MXdvZ2hoejE2aXd0ZQ=="
+                            target="_blank" aria-label="Riza tandel Twitter Profile"><i
                                 class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"
-                            aria-label="Riza tandel Facebook Profile"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/riza-tandel-149bb62a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"
-                            aria-label="Riza tandel LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Riza tandel Facebook Profile"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2"
+                            href="https://www.linkedin.com/in/riza-tandel-149bb62a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                            target="_blank" aria-label="Riza tandel LinkedIn Profile"><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -355,99 +432,86 @@
             </div>
     </section>
 
-    <!-- Event Details -->
     <section class="page-section bg-light" id="portfolio">
         <div class="container Events">
             <div class="text-center">
                 <h2 class="text-5xl font-bold text-uppercase">Events</h2>
                 <h3 class="text-2xl text-gray-900 mb-9 mt-2">Events by GeeksForGeeks BVM </h3>
             </div>
-            <!-- <div class="row"> -->
-                <!-- <div class="col-lg-4 col-sm-6 mb-4"></div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item" >
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#!">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets-2024/events/meet_with_geeks/meet_with_geek.jpg" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Meet With Geek</div>
-                            <div class="portfolio-caption-subheading text-muted">05th Oct,2024</div>
-                        </div>
-                    </div>
-                    
+
+            <div class="flex flex-wrap justify-center items-center gap-10">
+                <div class="event-trigger bg-gray-200 text-black text-center p-2 m-2 rounded cursor-pointer"
+                    data-event="cyber_geek">
+                    <img class="w-80 h-80 object-cover" src="assets-2024/events/Cyber_Geeks/cyber_geek_thumbnail.jpg"
+                        alt="Cyber Geek">
+                    <div>CyberGeek</div>
+                    <div>18th Jan, 2025</div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4"></div> -->
-                
-            <!-- </div> -->
-        <!-- </div> -->
-        <div class="flex flex-wrap justify-center items-center gap-10">
-            <!-- Event Cards -->
-            <div class="event-trigger bg-gray-200 text-black text-center p-2 m-2 rounded cursor-pointer" data-event="cyber_geek">
-                <img class="w-80 h-80 object-cover" src="assets-2024/events/Cyber_Geeks/cyber_geek_thumbnail.jpg" alt="Cyber Geek">
-                <div>CyberGeek</div>
-                <div>18th Jan, 2025</div>
-            </div>
-            <div class="event-trigger bg-gray-200 text-black text-center p-2 m-2 rounded cursor-pointer" data-event="meet_with_geeks">
-                <img class="w-80 h-80 object-cover" src="assets-2024/events/meet_with_geeks/meet_with_geek.jpg" alt="Meet With Geek">
-                <div>Meet With Geek</div>
-                <div>05th Oct, 2024</div>
-            </div>
-            
-        </div>
-    
-         <!-- Popup Overlay -->
-    <div id="popupOverlay" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center rounded-lg" style="z-index: 999;">
-        <div id="popupContent" class="bg-white px-5 py-3 rounded-lg  text-center relative my-element" >
-            <div class="flex flex-col space-between">
-                <span id="closePopup" class="absolute top-2 right-4 text-4xl  md:text-5xl cursor-pointer">&times;</span>
-            <h2 id="popupTitle" class="text-2xl font-bold mb-2 bg-green-500 text-white rounded-lg py-1 "></h2>
-            <p id="popupDescription" class="text-xs mb-3 text-gray-600"></p>
-            
-            <!-- Carousel -->
-            <button id="prevBtn" class="absolute text-3xl left-1 md:left-12 top-1/2 transform-translate-y-1/2  text-white p-1" style="border-radius:50%;">⏮️</button>
-            <div class="relative w-full max-w-lg mx-auto">
-                <div id="carousel" class="overflow-hidden w-full h-full flex items-center justify-center items-center style="transition: all ease 0.5s ;">
-                    <img id="carouselImage" class="w-full h-full object-cover rounded-lg" src="" alt="Event Image " style="transition: all ease 0.5s ;">
+                <div class="event-trigger bg-gray-200 text-black text-center p-2 m-2 rounded cursor-pointer"
+                    data-event="meet_with_geeks">
+                    <img class="w-80 h-80 object-cover" src="assets-2024/events/meet_with_geeks/meet_with_geek.jpg"
+                        alt="Meet With Geek">
+                    <div>Meet With Geek</div>
+                    <div>05th Oct, 2024</div>
                 </div>
-            </div>
-            <button id="nextBtn" class="absolute text-3xl right-1 md:right-12 top-1/2 transform-translate-y-1/2  text-white p-1" style="border-radius:50%;">⏭️</button>
 
             </div>
-            <button id="downloadReport" class="bg-green-500 text-white px-4 py-2 rounded mt-2 text-sm">Download Report</button>
-        </div>
-    </div>
-        
-        
+
+            <div id="popupOverlay"
+                class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center rounded-lg"
+                style="z-index: 999;">
+                <div id="popupContent" class="bg-white px-5 py-3 rounded-lg  text-center relative my-element">
+                    <div class="flex flex-col space-between">
+                        <span id="closePopup"
+                            class="absolute top-2 right-4 text-4xl  md:text-5xl cursor-pointer">×</span>
+                        <h2 id="popupTitle" class="text-2xl font-bold mb-2 bg-green-500 text-white rounded-lg py-1 ">
+                        </h2>
+                        <p id="popupDescription" class="text-xs mb-3 text-gray-600"></p>
+
+                        <button id="prevBtn"
+                            class="absolute text-3xl left-1 md:left-12 top-1/2 transform-translate-y-1/2  text-white p-1"
+                            style="border-radius:50%;">⏮️</button>
+                        <div class="relative w-full max-w-lg mx-auto">
+                            <div id="carousel"
+                                class="overflow-hidden w-full h-full flex items-center justify-center items-center style="
+                                transition: all ease 0.5s ;">
+                                <img id="carouselImage" class="w-full h-full object-cover rounded-lg" src=""
+                                    alt="Event Image " style="transition: all ease 0.5s ;">
+                            </div>
+                        </div>
+                        <button id="nextBtn"
+                            class="absolute text-3xl right-1 md:right-12 top-1/2 transform-translate-y-1/2  text-white p-1"
+                            style="border-radius:50%;">⏭️</button>
+
+                    </div>
+                    <button id="downloadReport" class="bg-green-500 text-white px-4 py-2 rounded mt-2 text-sm">Download
+                        Report</button>
+                </div>
+            </div>
+
+
     </section>
 
-    <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Contact Us</h2>
-                <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
             </div>
             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <!-- Name input-->
                             <input class="form-control" id="name" type="text" placeholder="Your Name *"
                                 data-sb-validations="required" />
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <div class="form-group">
-                            <!-- Email address input-->
                             <input class="form-control" id="email" type="email" placeholder="Your Email *"
                                 data-sb-validations="required,email" />
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <div class="form-group mb-md-0">
-                            <!-- Phone number input-->
                             <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
                                 data-sb-validations="required" />
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
@@ -457,7 +521,6 @@
 
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
-                            <!-- Message input-->
                             <textarea class="form-control" id="message" placeholder="Your Message *"
                                 data-sb-validations="required"></textarea>
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
@@ -465,10 +528,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Submit success message-->
-                <!---->
-                <!-- This is what your users will see when the form-->
-                <!-- has successfully submitted-->
                 <div class="d-none" id="submitSuccessMessage">
                     <div class="text-center text-white mb-3">
                         <div class="fw-bolder">Form submission successful!</div>
@@ -481,21 +540,16 @@
                 <div class="d-none" id="submitErrorMessage">
                     <div class="text-center text-danger mb-3">Error sending message!</div>
                 </div>
-                <!-- Submit Button-->
                 <div class="text-center">
-                    <button class="btn btn-primary btn-xl text-uppercase disabled mb-5"
-                        id="submitButton" type="submit">Send Message
+                    <button class="btn btn-primary btn-xl text-uppercase disabled mb-5" id="submitButton"
+                        type="submit">Send Message
                     </button>
                 </div>
             </form>
         </div>
     </section>
-    <!-- Footer-->
-
-    <!-- Socials GFG CLUB -->
-
     <div class="socials">
-        <a href="https://twitter.com/GfgBvm"  target="_blank">
+        <a href="https://twitter.com/GfgBvm" target="_blank">
             <img src="./icons/Twitter.svg" alt="Twitter" loading="lazy" class="h-12 " />
         </a>
         <a href="https://www.instagram.com/gfgbvm/" target="_blank"><img src="./icons/Instagram.svg" alt="Instagram"
@@ -506,7 +560,6 @@
                 src="./icons/Facebook.svg" alt="Facebook" class="h-12" /></a>
     </div>
 
-    <!-- Portfolio item 6 modal popup-->
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -516,7 +569,6 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
@@ -547,7 +599,6 @@
         </div>
     </div>
 
-    <!-- footer starts  -->
     <footer>
         <div class="row">
             <div class="col">
@@ -580,8 +631,8 @@
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#events">EVENTS</a></li>
                     <li><a href="#team">TEAM</a></li>
-                    <li><a
-                            href="https://drive.google.com/drive/folders/1jmMgsG7HqT6tP1Ob4kEDuCvKk6HOq7Yp" target="_blank">CERTIFICATE</a>
+                    <li><a href="https://drive.google.com/drive/folders/1jmMgsG7HqT6tP1Ob4kEDuCvKk6HOq7Yp"
+                            target="_blank">CERTIFICATE</a>
                     </li>
                     <li><a href="#contact-us-loc">CONTACT US</a></li>
                 </ul>
@@ -603,15 +654,13 @@
             </div>
         </div>
         <hr>
-        <!-- <p class="copyright">GeeksForGeeks BVM © 2022 | All Rights Reserved</p> -->
     </footer>
 
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start footer-font">Copyright &copy; GeeksForGeeks BVM 2024</div>
+                <div class="col-lg-4 text-lg-start footer-font">Copyright © GeeksForGeeks BVM 2024</div>
                 <div class="col-lg-4 text-lg-end">
-                    <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a> -->
                     <a class="link-dark text-decoration-none footer-font" style="color: #fff;" href="#!">All Rights
                         Reserved</a>
                 </div>
@@ -619,7 +668,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap core JS-->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const popupOverlay = document.getElementById("popupOverlay");
@@ -645,7 +693,7 @@
                         "assets-2024/events/meet_with_geeks/DSCN5900.JPG",
                         "assets-2024/events/meet_with_geeks/1.JPG",
                         "assets-2024/events/meet_with_geeks/9.JPG",
-                        
+
 
                     ],
                     report: "assets-2024/events/meet_with_geeks/MeetWGeeks.pdf"
@@ -720,7 +768,6 @@
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="js/event_script.js"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
